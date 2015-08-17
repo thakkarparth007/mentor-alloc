@@ -16,36 +16,36 @@ function validateLogin(uname, pwd, cb) {
 	}
 
 	var logins = [
-		["Snigdha","chhotu motu","ARCHI"],
+		["Snigdha","password","ARCHI"],
 
-		["Parth","epicboss","CSE"],
-		["Suhith","utubeapi","CSE"],
-		["Sachin","quackitbbz","CSE"],
+		["Parth","password","CSE"],
+		["Suhith","password","CSE"],
+		["Sachin","password","CSE"],
 		
-		["Kavya","parth is awesome","PROD"],
-		["Daksh","saale bhen****","PROD"],
-		["Suraj","yeda samjha hai?","PROD"],
-		["Rajesh","treasurer123","PROD"],
-		["Anu","bouncing babe","PROD"],
+		["Kavya","password","PROD"],
+		["Daksh","password","PROD"],
+		["Suraj","password","PROD"],
+		["Rajesh","password","PROD"],
+		["Anu","password","PROD"],
 
-		["Varun","mangoes from village","MECH"],
-		["Shakthidhar","the epic run","MECH"],
+		["Varun","password","MECH"],
+		["Shakthidhar","password","MECH"],
 		
-		["Aishwaryaa","i'm the dasa girl","ECE"],
-		["Sashank","fafaank","ECE"],
+		["Aishwaryaa","password","ECE"],
+		["Sashank","password","ECE"],
 		
-		["Stutee","anda ka fanda","MME"],
+		["Stutee","password","MME"],
 		
-		["Shriya","i hate you","ICE"],
+		["Shriya","password","ICE"],
 		
-		["Shubham","mallu gf","CHEM"],
-		["Preetham","mike testing","CHEM"],
-		["Teja","bheja fry","CHEM"],
+		["Shubham","password","CHEM"],
+		["Preetham","password","CHEM"],
+		["Teja","password","CHEM"],
 		
-		["Sivagar","anime? i love you","EEE"],
+		["Sivagar","password","EEE"],
 		
-		["Varshini","settings.ini","CIVIL"],
-		["Saikiran","baalti bhar paani","CIVIL"]
+		["Varshini","password","CIVIL"],
+		["Saikiran","password","CIVIL"]
 	];
 	for(var i = 0; i < logins.length; i++) {
 		if(uname == logins[i][0] && pwd == logins[i][1]) {
