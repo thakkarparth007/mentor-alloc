@@ -1,0 +1,421 @@
+.transition {
+	-webkit-transition: 0.1s all;
+	-moz-transition: 0.1s all;
+	-o-transition: 0.1s all;
+	-ms-transition: 0.1s all;
+	transition: 0.1s all;
+}
+
+.no-select {
+	-moz-user-select: none;
+	-webkit-user-select: none;
+	-o-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+	cursor: default;
+}
+
+* {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-o-box-sizing: border-box;
+	-ms-box-sizing: border-box;
+	box-sizing: border-box;
+
+	margin: 0;
+	padding: 0;
+
+	position: relative;
+}
+
+html, body {
+	margin: 0;
+	padding: 0;
+	width: 100%;
+	height: 100%;
+}
+
+header {
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	height: 50px;
+	box-shadow: 0 0 10px #000;
+	z-index: 1000;
+
+	font-size: 25px;
+	font-family: sans-serif;
+	color: #1976D2;
+	text-align: center;
+
+	line-height: 50px;
+	padding: 0 10px;
+	background: rgba(255,255,255,0.9);
+}
+
+header > div {
+	height: 50px;
+	position: absolute;
+	left: 50%;
+	transform: translateX(-50%);
+	background: white;
+	width: 800px;
+}
+
+header span {
+	margin: 0;
+	background: white;
+	height: 50px;
+}
+
+header a {
+	margin: 0 10px;
+	padding: 0 10px;
+	float: right;
+	text-decoration: none;
+	background: #1976D2;
+	color: white;
+}
+
+header a:hover {
+	background: #2196F3;
+	box-shadow: 0 0 3px #000;
+}
+
+header #save {
+	background: green;
+	font-size: 12pt;
+}
+
+header #logo {
+	margin: 3px;
+	height: 44px;
+	float: left;
+	box-shadow: 0 0 2px #000;
+}
+
+header #logo:hover {
+	transform: rotate(360deg);
+	-webkit-transition: 0.5s all;
+	-moz-transition: 0.5s all;
+	-o-transition: 0.5s all;
+	-ms-transition: 0.5s all;
+	transition: 0.5s all;
+}
+
+header #title {
+	font-size: 30px;
+	font-weight: bold;
+}
+
+section {
+	position: absolute;
+	top: 50px;
+	left: 5px;
+	right: 5px;
+	bottom: 5px;
+	z-index: 1;
+}
+
+section>div {
+	top: 50px;
+	float: left;
+	display: block;
+}
+
+div#allotted {
+	padding: 0 0 20px 0;
+	margin: -55px 2.5% 0 2.5%;
+	width: 72.5%;
+	left: 22.5%;
+}
+
+div#unallocated-wrapper {
+	width: 20%;
+	margin: 10px 0 0 2.5%;
+	color: #212121;
+	position: fixed;
+}
+
+div#unallocated-wrapper:hover {
+	box-shadow: 0 0 5px #000;
+}
+
+div#unallocated-header {
+	margin: 0 -5px;
+	height: 60px;
+	background: #1976D2;
+	box-shadow: 0 0 2px #000;
+	z-index: 2;
+	text-align: center;
+	color: white;
+	line-height: 60px;
+	font-size: 22px;
+	font-family: sans-serif;
+}
+
+div#unallocated {
+	height: 540px;
+	overflow-y: auto;
+}
+
+div.gender-Male {
+	background: #BBDEFB;
+}
+
+div.gender-Female {
+	background: #F8BBD0;
+}
+
+div.mentor {
+	float: left;
+	width: 24%;
+	height: 350px;
+	color: white;
+	margin: 15px 0.5% 0 0.5%;
+	box-shadow: 0 0 1px #000;
+}
+
+div.mentor > .header {
+	height: 60px;
+	padding: 0 10px;
+	font-size: 24px;
+	text-transform: capitalize;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	overflow: hidden;
+	line-height: 60px;
+
+	z-index: 2;
+}
+
+div.mentor > .header > span.name {
+	display: block;
+	float: left;
+	width: 90%;
+	text-overflow: ellipsis;
+	overflow: hidden;
+}
+
+div.mentor > .header > span.mentee-count {
+	display: block;
+	float: left;
+	width: 10%;
+	float: right;
+}
+
+div.mentor > .header::after {
+	content: "";
+	display: table;
+	clear: both;
+}
+
+div.mentor > .details {
+	padding: 5px 10px;
+	height: 60px;
+	font-size: 15px;
+	text-transform: capitalize;
+
+	z-index: 1;
+}
+
+div.mentor:hover {
+	box-shadow: 0 0px 5px #000;
+}
+
+div.mentor:hover > .header {
+	box-shadow: 0 0px 3px #000;
+}
+div.mentor:hover > .details {
+	box-shadow: 0 1px 3px #000;
+}
+
+div.mentor > .details > div {
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	overflow: hidden;
+}
+
+div.mentor.gender-Male > .header {
+	background: #1976D2;
+}
+
+div.mentor.gender-Male > .details {
+	background: #2196F3;
+}
+
+div.mentor.gender-Female > .header {
+	background: #C2185B;
+}
+
+div.mentor.gender-Female > .details {
+	background: #E91E63;
+}
+
+div.mentee {
+	display: block;
+	padding: 5px;
+	cursor: -moz-grab;
+}
+
+/*div.mentor:not(.country-india)*/ 
+div.mentee:not(.country-india), 
+div.mentor div.mentee-list div.mentee:not(.country-india) {
+	border-left: 10px solid green;
+	/*color: white;*/
+}
+div.mentor div.mentee-list div.mentee:not(.locked):hover {
+	color: white;
+}
+div.mentee:hover {
+	box-shadow: 0 0 3px #000 inset;
+}
+div.mentee span {
+	display: block;
+}
+div.mentee .header, div.mentee .state, div.mentee .languages {
+	text-transform: capitalize;
+}
+div.mentee:not(.locked):active {
+	cursor: -moz-grabbing;
+}
+
+div.mentee.gender-Male:not(.locked):hover {
+	background: #2196F3 !important;
+}
+
+div.mentee.gender-Female:not(.locked):hover {
+	background: #E91E63 !important;
+}
+
+div.mentor div.mentee-list {
+	height: 230px;
+	overflow-y: auto;
+}
+
+div.mentor div.mentee-list div.mentee {
+	font-size: 15px;
+	border-bottom: 0px solid #e57373;
+	color: #727272;
+}
+
+div.mentee span {
+	display: block;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	overflow: hidden;
+}
+
+div.mentee.gender-Female.locked {
+	background: rgba(247,207,248,1) !important;
+	color: darkgray !important;
+	cursor: not-allowed;
+}
+
+div.mentee.gender-Male.locked {
+	background: rgba(227,230,255,1) !important;
+	color: darkgray !important;
+	cursor: not-allowed;
+}
+
+div.mentee.locked:hover {
+	box-shadow: 0 0 1px #000 inset;
+}
+
+.drag-enter {
+	box-shadow: 0 0 10px #000;
+}
+
+.drag-enter.drop-not-allowed:after {
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background: rgba(0,0,0,0.5);
+}
+
+.tooltipsy {
+	padding: 10px;
+	color: #303030;
+	background-color: #f5f5b5;
+	border: 1px solid #deca7e;
+}
+
+.tooltipsy table td {
+	padding: 0 3px;
+}
+
+.tooltipsy table td:first-child {
+	color: #1976D2;
+}
+
+#display-allotments-container {
+	z-index: 10000;
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	overflow: auto;
+	display: none;
+	background: rgba(255,255,255,0.7);
+	padding: 50px 0;
+}
+
+#display-allotments-container .title {
+	box-shadow: 0 0 2px #000;
+	text-align: center;
+	width: 90%;
+	margin: 0 auto;
+	background: #444;
+	display: block;
+	font-size: 16pt;
+	padding: 10px;
+	color: white;
+}
+
+.display-allotments {
+	width: 90%;
+	margin: 0 auto 50px auto;
+	border-collapse: collapse;
+	box-shadow: 0 0 2px #000;
+	background: white;
+}
+
+.display-list-mentor {
+	background: green;
+	font-weight: bold;
+}
+
+.display-list-mentor.gender-Male {
+	background: #2196F3 !important;
+}
+.display-list-mentor.gender-Female {
+	background: #E91E63 !important;
+}
+
+.display-list-mentor td {
+	padding: 10px 5px;
+	font-weight: bold;
+	border-bottom: 1px solid black;
+}
+
+.display-list-mentor:not(.country-india) td:first-child,
+.display-list-mentee:not(.country-india) td:first-child {
+	border-left: 15px solid green;
+}
+
+.display-list-mentee.gender-Male {
+	background: #BBDEFB;
+}
+
+.display-list-mentee.gender-Female {
+	background: #F8BBD0;
+}
+
+.display-list-mentee td {
+	padding: 5px;
+}

@@ -1,0 +1,17 @@
+{{#each models}}
+	<tr class="display-list-mentor gender-{{attributes.Gender}} country-{{toLowerCase attributes.Country}}">
+		<td>{{toTitleCase attributes.Name}} ({{ attributes.MenteesList.length }})</td>
+		<td>{{toTitleCase attributes.State}}</td>
+		<td>{{toTitleCase attributes.Country}}</td>
+		<td>{{formatLanguages attributes.Languages}}</td>
+	</tr>
+
+	{{#each attributes.MenteesList.models}}
+		<tr class="display-list-mentee gender-{{attributes.Gender}} country-{{toLowerCase attributes.Country}}">
+			<td>{{toTitleCase attributes.Name}}</td>
+			<td>{{toTitleCase attributes.State}}</td>
+			<td>{{toTitleCase attributes.Country}}</td>
+			<td>{{formatLanguages attributes.Languages}}</td>
+		</tr>
+	{{/each}}
+{{/each}}

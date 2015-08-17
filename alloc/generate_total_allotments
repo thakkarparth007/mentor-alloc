@@ -1,0 +1,62 @@
+var fs = require('fs');
+
+function toLowerCase(str) { return str ? str.toLowerCase() : "N/A"; }
+function toTitleCase(str) {
+	var _casefn = "toUpperCase";
+	var newstr = "";
+	for(var i = 0; i < str.length; i++) {
+		newstr += str.substr(i,1)[_casefn]();
+		if(/[a-z]/i.test(str.substr(i,1))) {
+			_casefn = "toLowerCase";
+		}
+		else {
+			_casefn = "toUpperCase";
+		}
+	}
+	return newstr;
+}
+
+var data = JSON.parse(fs.readFileSync('./ALLOTTED.json'));
+var table = [];
+for(var dept in data) {
+	//
+	// DON'T SEND TO ARCHI!!!!
+	//
+	if(dept == "ARCHI") continue;
+	
+	var gen = ['Male','Female'];
+	for(var j = 0; j < 2; j++) {
+		for(var z = 0; z < data[dept][gen[j]].length; z++) {
+			var person = data[dept][gen[j]][z];
+
+			for(var k = 0; k < person.MenteesList.length; k++) {
+				var mentee = person.MenteesList[k];
+				table.push([
+					mentee.Department,
+					toTitleCase(mentee.Name),
+					toTitleCase(person.Name),
+					person.PhNum,
+					person.Department
+				]);
+			}
+			
+			console.log(person.Name);
+			//fs.writeFileSync('./email/' + person.RollNum + '.html', generate_mail(person).html);
+		}
+	}
+}
+
+table.sort(function(a, b) {
+	// mentee-department first
+	if(a[0] < b[0]) return -1;
+	if(a[0] > b[0]) return 1;
+
+	if(a[1] < b[1]) return -1;
+	if(a[1] > b[1]) return 1;
+
+	return 0;
+});
+
+table = table.map(x => x.join("\t"));
+
+fs.writeFileSync('./output/TOTAL-ALLOTMENTS-NO-CROSS.tsv', "Mentee Name\tMentee Department\tMentor Name\tMentor Ph.Num\tMentor Department\n" + table.join("\n"));

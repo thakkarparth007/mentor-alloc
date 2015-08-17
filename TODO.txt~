@@ -1,0 +1,18 @@
+Things to be done:
+1. Block access to mentee form data (doc from personal account)
+	- done
+
+2. Sending bulk mails to people who are allotted the mentees
+
+3. Remove the contact information from the allotment page
+
+4. Getting the email ids of the mentors and modifying the 
+   mentors-data safely.
+
+    - Made the form. 		done
+    - Inform the mentors.	NOT DONE
+    - Make the parser		NOT DONE
+
+5. Finding out the names of those mentors who haven't filled the
+   doc yet.
+

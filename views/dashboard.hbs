@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Orientation 2015 | Mentorship Programme</title>
+	<link rel="stylesheet" type="text/css" href="stylesheets/main.css">
+</head>
+<body>
+	<header class="no-select">
+		<img id="logo" class="transition" src="images/logo.png" />
+		<div>
+			<span id="title">Mentorship 2015</span>
+			<span id="department">{{ department }} :</span>
+			<span><span id="allotted-count"></span> students allotted</span>
+		</div>
+
+		<a id="logout" href="./logout/">Log out</a>
+		<a id="save" href="#">View allotments</a>
+	</header>
+	<section>
+		<div id="unallocated-wrapper">
+			<div id="unallocated-header">
+				<span id="unallocated-title">Unallocated</span>
+				<span id="unallocated-count">0</span>
+			</div>
+			<div id="unallocated"></div>
+		</div>
+		<div id="allotted"></div>
+	</section>
+
+	<div id="display-allotments-container">
+		<span class="title">Allotments {{ department }} (Unallocated mentees not shown)</span>
+	</div>
+	
+	<!-- Libraries -->
+	<script type="text/javascript" src="javascripts/jquery-1.11.3.js"></script>
+	<script type="text/javascript" src="javascripts/tooltipsy.min.js"></script>
+	<script type="text/javascript" src="javascripts/underscore.js"></script>
+	<script type="text/javascript" src="javascripts/handlebars-v3.0.3.js"></script>
+	<script type="text/javascript" src="javascripts/handlebars.templates.js"></script>
+	<script type="text/javascript" src="javascripts/backbone.js"></script>
+	<!-- main -->
+	<script type="text/javascript" src="javascripts/main2.js"></script>
+</body>
+</html>
